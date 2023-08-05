@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" type="text/css" href="index.css">
+ <link rel="stylesheet" href="./fonts/font-awesome.min.css">
+ <title>sIdenav with condition</title>
+</head>
+<body>
+ <div class="container">
+ <div class="bars" onclick= "sIdenav()">
+    <i  onclick= "sIdenav()"  id="bars"class="fa fa-bars"></i>
+     <i id="x"  class="fa fa-angle-double-down"></i>
+ </div>
+ <div id='bottom-nav' onclick= "sIdenav()" class="bottom-nav">
+  <ul>
+   <li>Home</li>
+   <li>About</li>
+   <li> Contact</li>
+   <li>Help</li>
+   <li>Cart</li>
+  </ul>
+</div>
+<div class="input-container">
+   <input id="text" type="text">
+   <button class="fa fa-paper-plane-o" onclick="chat()">Send</button><span onclick="display()" class="chatting"> <i class="fa fa-comments-o"></i>chat</span>
+ </div>
+ <div class="containm" id="ms-contner">
+  <div class="contain1">
+     <div class="sec1"id="sec1">red</div>
+     <div class="sec2" id="sec2"> green</div>
+  </div>
+  <div class="contain1">
+   <div class="sec1" id="sec3">yellow</div>
+   <div class="sec2"id="sec4"> purple</div>
+ </div> 
+ <div class="contain1">
+   <div class="sec1"id="sec5">violet</div>
+   <div class="sec2"id="sec6"> pink</div>
+</div>
+<div class="contain1">
+   <div class="sec1"id="sec7">male</div>
+   <div class="sec2"id="sec8"> female</div>
+</div>
+<div class="contain1">
+   <div class="sec1" id="sec9">ladies</div>
+   <div class="sec2" id="sec10"> gentlemen</div>
+</div>
+<div class="contain1">
+   <div class="sec1"id="sec11">guys</div>
+   <div class="sec2" id="sec12"> friends</div>
+</div>
+<div class="contain1">
+   <div class="sec1" id="sec13">boys</div>
+   <div class="sec2" id="sec14"> girls</div>
+</div>
+<div class="contain1">
+   <div class="sec1" id="sec15">dog</div>
+   <div class="sec2" id="sec16"> puppy</div>
+</div>
+ </div>
+ </div> 
+ 
+</body>
+<script>
+    let  bars = document.getElementById('bars');
+    bars.addEventListener('click',()=>{
+     bars.style.display='none';
+    });
+  let x = document.getElementById('x');
+   bars.addEventListener('click',()=>{
+    x.style.display='block';
+   });
+   x.addEventListener('click',()=>{
+    bars.style.display='block';
+    x.style.display='none';
+   });
+   let bottomnav=document.getElementById('bottom-nav');
+   function sIdenav(){
+    if(bottomnav.style.bottom =='-530px' ){
+       bottomnav.style.bottom='400px';
+    }else{
+      bottomnav.style.bottom='-530px';
+    } 
+   };
+   function chat (){
+    let  text = document.getElementById('text').value;
+      if ( text == "red"){
+      document.getElementById('sec1').style.display='flex';
+      }else if(text == "blue"){
+        document.getElementById('sec2').style.display='flex';  
+      }else if(text == "yellow"){
+         document.getElementById('sec3').style.display='flex';
+      }else if(text =="purple"){
+         document.getElementById('sec4').style.display='flex';
+      }else if(text =="violet"){
+         document.getElementById('sec5').style.display='flex';
+      }else if(text =="pink"){
+         document.getElementById('sec6').style.display='flex';
+      }else if(text =="male"){
+         document.getElementById('sec7').style.display='flex';
+      }else if(text =="female"){
+         document.getElementById('sec8').style.display='flex';
+      }else if(text =="ladies"){
+         document.getElementById('sec9').style.display='flex';
+      }else if(text =="gentleman"){
+         document.getElementById('sec10').style.display='flex';
+      }else if(text =="guys"){
+         document.getElementById('sec11').style.display='flex';
+      }else if(text =="friends"){
+         document.getElementById('sec12').style.display='flex';
+      }else if(text =="boys"){
+         document.getElementById('sec13').style.display='flex';
+      }else if(text =="girls"){
+         document.getElementById('sec14').style.display='flex';
+      }else if(text =="dog"){
+         document.getElementById('sec15').style.display='flex';
+      }else if(text =="puppy"){
+         document.getElementById('sec16').style.display='flex';
+      }else{
+         document.write('encrypted')
+      }
+   }
+   let  container = document.getElementById('ms-contner');
+      function display(){
+      if(container.style.bottom=='-600px'){
+        container.style.bottom='120px';
+      }else{
+         container.style.bottom='-600px';
+      }
+      }
+</script>
+</html>
